@@ -267,12 +267,50 @@
 //Can issue more books
 
 
-let membership = "yes"
-let book_issued = 2
+//let membership = "yes"
+//let book_issued = 2
+//
+//if (membership == "yes"){
+//    console.log("Entry allowed ")
+//}
+//if (book_issued < 3){
+//   console.log("Can issue more books")
+//}
 
-if (membership == "yes"){
-    console.log("Entry allowed ")
-}
-if (book_issued < 3){
-   console.log("Can issue more books")
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//10_Online_Exam_System
+//    System evaluates exam conditions:
+//
+//* If marks ≥ 40 → Pass
+//* If attendance ≥ 75 → Eligible for certificate
+//Input:
+//Enter marks: 60
+//Enter attendance: 80
+//Output:
+//Pass
+//Eligible for certificate
+
+let marks = 60
+attendance = 80
+
+if( marks>=40){
+    console.log("Pass")
+}    
+if (attendance>=75){
+    console.log("Eligible for certificate")
+}    
