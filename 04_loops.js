@@ -215,6 +215,12 @@ for (let num = startNum; num <= endNum; num++) {
 //145
 
 
+
+
+
+
+
+
 let startRange = 1;
 let endRange = 500;
 
