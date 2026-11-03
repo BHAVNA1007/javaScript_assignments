@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login Window</title>
+
+   <style type="text/css">
+			body{
+				background:url(back.jpg);
+				background-size:100%;
+			}
+			.login{	
+				width:380px;
+				height:260px;
+				background:rgba(0,0,0,.6);
+				margin:auto;
+				margin-top:100px;
+				border-radius:5px;
+				color:white;
+				padding:50px;
+			}
+			.login table{
+				width:100%;
+			}
+			input[type="email"],input[type="password"]{
+				width:100%;
+				padding:10px;
+				font-size:16px;
+                box-sizing: border-box;
+			}
+			a{
+			color:white;
+			}
+			input[type="submit"] {
+            width: 100%;
+            color: white;
+            padding: 10px 5px;
+            background: orange;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+			#b1{
+				font-size:20px;
+			}
+			td,th{
+				padding: 10px;
+			}
+			input[type="submit"]:hover {
+            background: rgb(3, 202, 252);
+			
+			}
+		</style>
+</head>
+
+<body>
+
+    <div class="login">
+
+        <form id="loginForm">
+
+            <table>
+                <tr>
+                    <th><b id="b1">LOGIN WINDOW</b></th>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="email" id="email"
+                            placeholder="Your Email Address">
+                        <span id="emailError" class="error" style="color: red;"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="password" id="password"
+                            placeholder="Your Password">
+                        <span id="passwordError" class="error" style="color: red;"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input id="ch1" type="checkbox">
+                        <label for="ch1">Agree With</label>
+
+                        <a href="#">Terms & Conditions</a>
+
+                        <br>
+                        <span id="checkError" class="error" style="color: red ;"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="submit" value="Login">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+    </div>
+
+
+    <script>
+
+        // Get form elements
+
+        let form = document.getElementById("loginForm");
+
+        let email = document.getElementById("email");
+        let password = document.getElementById("password");
+        let checkbox = document.getElementById("ch1");
+
+        let emailError = document.getElementById("emailError");
+        let passwordError = document.getElementById("passwordError");
+        let checkError = document.getElementById("checkError");
+
+
+        // Form validation
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            // Clear previous errors
+
+            emailError.innerHTML = "";
+            passwordError.innerHTML = "";
+            checkError.innerHTML = "";
+
+            let isValid = true;
+
+
+            // 1. Email validation
+
+            let emailValue = email.value.trim();
+
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (emailValue === "") {
+
+                emailError.innerHTML = "Email is required";
+                isValid = false;
+
+            }
+            else if (!emailPattern.test(emailValue)) {
+
+                emailError.innerHTML = "Enter a valid email address";
+                isValid = false;
+
+            }
+
+
+            // 2. Password validation
+
+            let passwordValue = password.value;
+
+            if (passwordValue === "") {
+
+                passwordError.innerHTML = "Password is required";
+                isValid = false;
+
+            }
+            else if (passwordValue.length < 6) {
+
+                passwordError.innerHTML = "Password must contain at least 6 characters";
+                isValid = false;
+
+            }
+
+
+            // 3. Checkbox validation
+
+            if (!checkbox.checked) {
+
+                checkError.innerHTML = "Please accept Terms & Conditions";
+                isValid = false;
+
+            }
+
+
+            // 4. Final validation
+
+            if (isValid) {
+
+                alert("Login Successful!");
+
+                form.reset();
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
