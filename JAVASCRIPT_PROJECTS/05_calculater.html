@@ -1,0 +1,98 @@
+<html>
+	<head>
+		
+		<style>
+			input[type="text"]
+			{
+				padding:10px;
+				width:100%;
+				font-size:30px;
+				color:black;
+				background: white;
+				
+			}
+			input[type="button"]
+			{
+				padding:0px;
+				color:white;
+				width:60px;
+				height:60px;
+				box-shadow:1px 1px 1px white;
+				border-radius:4px;
+				background: rgb(34,195,195);
+				font-size:22px;
+			}
+			input[type="button"]:hover
+			{
+				background:#1db6e0;
+			}
+			table
+			{
+				border:10px solid gray;
+				box-shadow:3px 4px 4px black;
+				margin-top:70px;
+				background:gray;
+				width:240px;
+			}
+		</style>
+	</head>
+	<body>
+		<table align="center">
+			<tr>
+				<td colspan="4"><input id="output" type="text" readonly/> </td>
+			</tr>
+			<tr>
+				<td><input type="button" value="C" onclick="clear_data()"/></td>
+				<td><input type="button" value="%" onclick="type_data(this.value)"/></td>
+				<td><input type="button" value="&lArr;" onclick="back_one()"/></td>
+				<td><input type="button" value="/" onclick="type_data(this.value)"/></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="7" onclick="type_data(this.value)"/></td>
+				<td><input type="button" value="8" onclick="type_data(this.value)"/></td>
+				<td><input type="button" value="9" onclick="type_data(this.value)"/></td>
+				<td><input type="button" value="*" onclick="type_data(this.value)"/></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="4" onclick="type_data(this.value)"/></td>
+				<td><input type="button" value="5" onclick="type_data(this.value)"/></td>
+				<td><input type="button" value="6" onclick="type_data(this.value)"/></td>
+				<td><input type="button" value="-" onclick="type_data(this.value)"/></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="1" onclick="type_data(this.value)"/></td>
+				<td><input type="button" value="2" onclick="type_data(this.value)"/></td>
+				<td><input type="button" value="3" onclick="type_data(this.value)"/></td>
+				<td><input type="button" value="+" onclick="type_data(this.value)"/></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="00" onclick="type_data(this.value)"/></td>
+				<td><input type="button" value="0" onclick="type_data(this.value)"/></td>
+				<td><input type="button" value="." onclick="type_data(this.value)"/></td>
+				<td><input type="button" value="=" onclick="cal()"/></td>
+			</tr>
+		</table>
+
+
+
+        <script>
+			function type_data(data)
+			{
+				document.getElementById("output").value=document.getElementById("output").value+data;
+			}
+			function cal()
+			{
+				document.getElementById("output").value=eval(document.getElementById("output").value)
+			}
+			function clear_data()
+			{
+				document.getElementById("output").value="";
+			}
+			function back_one()
+			{
+				var x=document.getElementById("output").value;
+				document.getElementById("output").value=x.substr(0,x.length-1);
+			}
+		</script>
+	</body>
+</html>
