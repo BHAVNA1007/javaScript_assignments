@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Page</title>
+    <style>
+
+
+	/* General Reset */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+/* Sign-Up Container */
+.signup-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+
+
+
+.signup-container h2 {
+    margin-bottom: 1rem;
+    color: #333333;
+}
+
+
+
+
+
+/* Form Styles */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.signup-form label {
+    font-size: 0.9rem;
+    color: #555555;
+    text-align: left;
+}
+
+.signup-form input {
+    padding: 0.8rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.signup-form input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.signup-form button {
+    padding: 0.8rem;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+/* Login Link */
+.login-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+	</style>
+	
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form action="#" method="POST" class="signup-form">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <p class="login-link">Already have an account? <a href="#">Log In</a></p>
+    </div>
+</body>
+</html>
