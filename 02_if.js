@@ -13,14 +13,14 @@
 //Eligible to vote
 //Allowed inside booth
 
-// let age = 30;
-// let id = "yes";
-// if (age >= 18) {
-//     console.log("Eligible to vote");
-// }
-// if (id == "yes") {
-//     console.log("Allowed inside booth");
-// }
+let age1 = 30;
+let id = "yes";
+if (age1 >= 18) {
+    console.log("Eligible to vote");
+}
+if (id == "yes") {
+    console.log("Allowed inside booth");
+}
 
 
 
@@ -44,13 +44,13 @@
 
 
 
-//let marks = 75;
-//if (marks >= 40) {
-//    console.log("Pass")
-//}
-//if (marks >= 75) {
-//    console.log("Distinction")
-//}
+let marks1 = 75;
+if (marks1 >= 40) {
+   console.log("Pass")
+}
+if (marks1 >= 75) {
+   console.log("Distinction")
+}
 
 
 
@@ -78,14 +78,14 @@
 
 
 
-//let cart_value = 1200;
-//
-//if (cart_value >= 500) {
-//    console.log("Free delivery applied");
-//}
-//if (cart_value >= 1000) {
-//    console.log("Discount coupon unlocked");
-//}
+let cart_value = 1200;
+
+if (cart_value >= 500) {
+   console.log("Free delivery applied");
+}
+if (cart_value >= 1000) {
+   console.log("Discount coupon unlocked");
+}
 
 
 
@@ -109,14 +109,14 @@
 //Enroll in weight loss program
 
 
-//let age = 25;
-//let bmi = 27;
-//if (age >= 18){
-//    console.log("gym access granted");
-//}
-//if (bmi > 25){
-//    console.log("Enroll in weight loss program");
-//}
+let age = 25;
+let bmi = 27;
+if (age >= 18){
+   console.log("gym access granted");
+}
+if (bmi > 25){
+   console.log("Enroll in weight loss program");
+}
 
 
 
@@ -141,14 +141,14 @@
 //Strong password 
 
 
-//let username = "admin";
-//let password = "secure123";
-//if (username == "admin"){
-//    console.log("Valid user");
-//}
-//if (password.length >= 8){
-//    console.log("Strong password");
-//}
+let username = "admin";
+let password = "secure123";
+if (username == "admin"){
+   console.log("Valid user");
+}
+if (password.length >= 8){
+   console.log("Strong password");
+}
 
 
 
@@ -172,14 +172,14 @@
 //High humidity alert
 
 
-//let temp = 30;
-//let humidity = 70;
-//if (temp >= 30){
-//   console.log("Hot day") 
-//}
-//if (humidity >= 70){
-//   console.log("High humidity alter")
-//}
+let temp = 30;
+let humidity = 70;
+if (temp >= 30){
+  console.log("Hot day") 
+}
+if (humidity >= 70){
+  console.log("High humidity alter")
+}
 
 
 
@@ -201,13 +201,13 @@
 //Bonus applicable
 
 
-//let salary = 55000
-//if (salary >= 30000) {
-//   console.log("Eligible for PF")
-//}
-//if (salary >= 50000) {
-//   console.log("Eligible for bonus")
-//}
+let salary = 55000
+if (salary >= 30000) {
+  console.log("Eligible for PF")
+}
+if (salary >= 50000) {
+  console.log("Eligible for bonus")
+}
 
 
 
